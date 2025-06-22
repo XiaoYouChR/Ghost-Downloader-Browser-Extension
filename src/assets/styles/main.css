@@ -1,0 +1,53 @@
+/* src/assets/styles/main.css */
+
+/* 1. A simple CSS reset for consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Define root variables for theming (Fluent Design inspired) */
+:root {
+  /* Font settings */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-size: 14px;
+
+  /* Light Theme Colors */
+  --background-color: #f5f5f5;
+  --card-background-color: #ffffff;
+  --text-color: #242424;
+  --text-secondary-color: #606060;
+  --accent-color: #0078d4;
+  --border-color: #e0e0e0;
+}
+
+/* 3. Dark Mode Theme using prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #252525;
+    --card-background-color: #323232;
+    --text-color: #f5f5f5;
+    --text-secondary-color: #a0a0a0;
+    --accent-color: #2899f5;
+    --border-color: #424242;
+  }
+}
+
+
+/* 4. Basic body styling for our extension pages (popup, options) */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  /* This is important for popups to have a consistent size */
+  min-width: 350px; /* As per our popup design */
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+}

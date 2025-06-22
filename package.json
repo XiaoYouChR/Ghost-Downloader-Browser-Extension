@@ -1,0 +1,28 @@
+{
+  "name": "ghost-downloader-browser-extension",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:chrome && npm run build:firefox",
+    "build:chrome": "TARGET_BROWSER=chrome vite build",
+    "build:firefox": "TARGET_BROWSER=firefox vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fluentui/web-components": "^2.6.1",
+    "@microsoft/fast-element": "^2.4.1",
+    "lodash-es": "^4.17.21",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.13",
+    "webextension-polyfill": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/webextension-polyfill": "^0.12.3",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.2.4",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vite-plugin-web-extension": "^4.4.4"
+  }
+}
